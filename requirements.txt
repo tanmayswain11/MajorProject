@@ -1,0 +1,13 @@
+ numpy 
+ scipy 
+ matplotlib 
+ pandas 
+ scikit-learn 
+ seaborn 
+ pywavelets 
+ opencv-python 
+ torch 
+ torchvision 
+ torchaudio 
+ streamlit 
+ jupyter

@@ -1,12 +1,11 @@
 import torch.nn as nn
+from torchvision.models import resnet18, ResNet18_Weights
 
-class SimpleCNN(nn.Module):
+class CNNModel(nn.Module):
     def __init__(self):
         super().__init__()
-        self.conv = nn.Conv2d(3, 8, 3)
-        self.fc = nn.Linear(8*254*254, 2)
+        self.model = resnet18(weights=ResNet18_Weights.DEFAULT)
+        self.model.fc = nn.Linear(self.model.fc.in_features, 3)
 
     def forward(self, x):
-        x = self.conv(x)
-        x = x.view(x.size(0), -1)
-        return self.fc(x)
+        return self.model(x)

@@ -1,23 +1,24 @@
 import torch
 from torchvision import transforms
 from PIL import Image
-from .model import SimpleCNN
+from .model import CNNModel
 
-classes = ["bird", "drone"]
+classes = ["bird","drone","plane"]
 
 def predict_image(path):
-    model = SimpleCNN()
+    model = CNNModel()
+    model.load_state_dict(torch.load("model/cnn/model.pth"))
     model.eval()
 
     transform = transforms.Compose([
-        transforms.Resize((256,256)),
+        transforms.Resize((128,128)),
         transforms.ToTensor()
     ])
 
     img = Image.open(path).convert("RGB")
     img = transform(img).unsqueeze(0)
 
-    out = model(img)
-    _, pred = torch.max(out, 1)
+    with torch.no_grad():
+        _,pred = torch.max(model(img),1)
 
-    return classes[pred.item()]   # ✅ FIX HERE
+    return classes[pred.item()]

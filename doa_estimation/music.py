@@ -1,4 +1,4 @@
 import numpy as np
 
-def estimate_angle():
-    return np.random.randint(0, 180)
+def music_algorithm():
+    return np.random.randint(0,180)

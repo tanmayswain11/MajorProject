@@ -5,7 +5,7 @@ pandas
 scikit-learn
 seaborn
 pywavelets
-opencv-python
+opencv-python-headless
 pillow
 torch
 torchvision

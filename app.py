@@ -42,8 +42,8 @@ body { background-color: #0b0f1a; color: white; }
 """, unsafe_allow_html=True)
 
 # ---------------- LOGOS ----------------
-BPUT_LOGO = "https://rcm.ac.in/rcm-insights/rcm-legacy/recognitions-and-approvals/bput-affiliation/"
-ROOMAN_LOGO = "https://rooman.net/"
+BPUT_LOGO = "logos/bput.png"
+ROOMAN_LOGO = "logos/rooman.png"
 
 # ---------------- HEADER ----------------
 col1, col2, col3 = st.columns([1,3,1])
@@ -91,13 +91,13 @@ if uploaded:
 
     # LEFT IMAGE
     with col1:
-        st.markdown('<div class="card">', unsafe_allow_html=True)
+        # st.markdown('<div class="card">', unsafe_allow_html=True)
         st.image("temp.png", caption="📡 Micro-Doppler Spectrogram", width="stretch")
-        st.markdown('</div>', unsafe_allow_html=True)
+        # st.markdown('</div>', unsafe_allow_html=True)
 
     # RIGHT RESULTS
     with col2:
-        st.markdown('<div class="card">', unsafe_allow_html=True)
+        # st.markdown('<div class="card">', unsafe_allow_html=True)
 
         cnn = predict_image("temp.png")
 

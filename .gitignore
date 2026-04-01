@@ -1,6 +1,38 @@
-data/
-*.pth
+# ---------------- PYTHON ----------------
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+
+# ---------------- VENV ----------------
+venv/
+env/
+radar_env/
+
+# ---------------- DATASET (VERY IMPORTANT) ----------------
+data/
+*.csv
+*.zip
+
+# ---------------- MODEL FILES ----------------
+*.pth
 *.pkl
-.env
+*.h5
+
+# ---------------- TEMP FILES ----------------
+temp.png
+*.log
+
+# ---------------- STREAMLIT ----------------
+.streamlit/
+
+# ---------------- OS FILES ----------------
+.DS_Store
+Thumbs.db
+
+# ---------------- IDE ----------------
+.vscode/
+.idea/
+
+# ---------------- TORCH CACHE ----------------
+.cache/

@@ -12,3 +12,5 @@ torchvision
 torchaudio
 streamlit
 jupyter
+joblib
+pyttsx3
